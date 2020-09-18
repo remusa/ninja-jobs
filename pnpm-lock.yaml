@@ -1,5 +1,6 @@
 dependencies:
   compression: 1.7.4
+  lorem-ipsum: 2.0.3
   polka: 1.0.0-next.11
   sirv: 1.0.6
 devDependencies:
@@ -1156,7 +1157,6 @@ packages:
     resolution:
       integrity: sha1-p9BVi9icQveV3UIyj3QIMcpTvCU=
   /commander/2.20.3:
-    dev: true
     resolution:
       integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==
   /commondir/1.0.1:
@@ -1522,6 +1522,16 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==
+  /lorem-ipsum/2.0.3:
+    dependencies:
+      commander: 2.20.3
+    dev: false
+    engines:
+      node: '>= 8.x'
+      npm: '>= 5.x'
+    hasBin: true
+    resolution:
+      integrity: sha512-CX2r84DMWjW/DWiuzicTI9aRaJPAw2cvAGMJYZh/nx12OkTGqloj8y8FU0S8ZkKwOdqhfxEA6Ly8CW2P6Yxjwg==
   /lower-case/1.1.4:
     dev: true
     resolution:
@@ -1974,6 +1984,7 @@ specifiers:
   '@rollup/plugin-node-resolve': ^8.0.0
   '@rollup/plugin-replace': ^2.2.0
   compression: ^1.7.1
+  lorem-ipsum: ^2.0.3
   polka: next
   rollup: ^2.3.4
   rollup-plugin-svelte: ^6.0.0
