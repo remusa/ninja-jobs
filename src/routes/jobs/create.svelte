@@ -1,10 +1,24 @@
 <script>
+	import { goto } from '@sapper/app'
+
   let title
   let salary
   let details
 
   const handleSubmit = async () => {
-    console.log(title, salary, details)
+    if (title && salary && details) {
+      const res = await fetch('jobs.json', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ title, salary, details }),
+      })
+
+      const updatedJobs = await res.json()
+
+			goto('jobs')
+    }
   }
 </script>
 
@@ -30,7 +44,6 @@
 </style>
 
 <h2>Add a New Job</h2>
-
 <form on:submit|preventDefault={handleSubmit}>
   <input type="text" placeholder="job title" bind:value={title} required />
   <input type="number" placeholder="amount" bind:value={salary} required />
