@@ -30,6 +30,7 @@
 </style>
 
 <h2>Add a New Job</h2>
+
 <form on:submit|preventDefault={handleSubmit}>
   <input type="text" placeholder="job title" bind:value={title} required />
   <input type="number" placeholder="amount" bind:value={salary} required />
