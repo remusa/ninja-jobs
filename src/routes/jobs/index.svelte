@@ -1,5 +1,5 @@
 <script context="module">
-  // console.log('module script')
+  // console.log('module script');
   export async function preload(page, session) {
     const res = await this.fetch('/jobs.json')
     const jobs = await res.json()
@@ -39,7 +39,7 @@
 
 <ul>
   {#each jobs as job}
-    <li><a href="/">{job.title}</a></li>
+    <li><a href={`jobs/${job.id}`}>{job.title}</a></li>
   {/each}
 </ul>
 

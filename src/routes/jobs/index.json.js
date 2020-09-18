@@ -6,7 +6,7 @@ export function get(req, res, next) {
 }
 
 export function post(req, res, next) {
-  const {title, salary, details} = req.body
+  const { title, salary, details } = req.body
   const id = uuidv4()
 
   jobs.push({title, salary, details, id})

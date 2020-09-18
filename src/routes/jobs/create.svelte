@@ -1,5 +1,5 @@
 <script>
-	import { goto } from '@sapper/app'
+  import { goto } from '@sapper/app'
 
   let title
   let salary
@@ -9,15 +9,12 @@
     if (title && salary && details) {
       const res = await fetch('jobs.json', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ title, salary, details }),
       })
-
       const updatedJobs = await res.json()
 
-			goto('jobs')
+      goto('jobs')
     }
   }
 </script>
