@@ -13,3 +13,8 @@
   export let job
 </script>
 
+<div class="job">
+  <h2>{job.title}</h2>
+  <p class="price">Salary of £{job.salary} / yr</p>
+  <p class="details">{job.details}</p>
+</div>
