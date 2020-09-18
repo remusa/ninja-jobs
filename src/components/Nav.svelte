@@ -1,5 +1,9 @@
 <script>
   export let segment
+
+  const handleClick = () => {
+    console.log(segment)
+  }
 </script>
 
 <style>
@@ -39,11 +43,12 @@
 
 <nav>
   <div>
-    <h1>Job Ninja</h1>
-
-    <ul class="li"><a class:current={segment === undefined} href=".">home</a></ul>
-    <ul class="li"><a class:current={segment === 'contact'} href="contact">contact</a></ul>
-    <ul class="li"><a class:current={segment === 'about'} href="about">about</a></ul>
-    <ul class="li"><a class:current={segment === 'jobs'} href="jobs">jobs</a></ul>
+    <h1 on:click={handleClick}>Job Ninja</h1>
+    <ul>
+      <li><a class:current={segment === undefined} href=".">home</a></li>
+      <li><a class:current={segment === 'contact'} href="contact">contact</a></li>
+      <li><a class:current={segment === 'about'} href="about">about</a></li>
+      <li><a rel=prefetch class:current={segment === 'jobs'} href="jobs">jobs</a></li>
+    </ul>
   </div>
 </nav>

@@ -1,5 +1,15 @@
+<script>
+  import { onMount } from 'svelte';
+
+  onMount(() => {
+    // safe for browser-only code - e.g. fetch
+    console.log('only ever runs in the browser')
+  })
+</script>
+
 <style>
-  h1, p {
+  h1,
+  p {
     text-align: center;
   }
 
@@ -21,15 +31,15 @@
     text-align: center;
   }
 
-	@media (min-width: 480px) {
-		h1 {
-			font-size: 4em;
-		}
-	}
+  @media (min-width: 480px) {
+    h1 {
+      font-size: 4em;
+    }
+  }
 </style>
 
 <svelte:head>
-	<title>Job Ninja</title>
+  <title>Job Ninja</title>
 </svelte:head>
 
 <div>
